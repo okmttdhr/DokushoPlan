@@ -2,5 +2,18 @@
   "name": "test",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "tsc": "$(npm bin)/tsc",
+    "test": "yarn tsc && $(npm bin)/ava"
+  },
+  "dependencies": {
+    "ava": "^0.18.2",
+    "typescript": "^2.2.1"
+  },
+  "ava": {
+    "files": [
+      "src/**/*.spec.js"
+    ]
+  }
 }
