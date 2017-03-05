@@ -4,8 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "info": "$(npm bin)/npm-scripts-info",
     "tsc": "$(npm bin)/tsc",
     "test": "yarn tsc && $(npm bin)/ava"
+  "scripts-info": {
+    "info": "information about the scripts",
+    "test": "all tests",
+    "test:unit": "run unit tests on the Node.js environment",
+    "test:component": "run tests for components on the browser environment"
   },
   "dependencies": {
     "ava": "^0.18.2",
@@ -16,5 +22,6 @@
     "files": [
       "src/**/*.spec.js"
     ]
+    "npm-scripts-info": "^0.3.6",
   }
 }
